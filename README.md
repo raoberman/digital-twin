@@ -72,6 +72,8 @@ Once the repo is cloned, navigate to the parent directory. The script `setupenv.
 ```shell
 ./setupenv.sh
 ```
+>*Note: Depending on your machine settings, you may need to run the command `chmod +x ./setupenv.sh` prior to running the `./setupenv.sh` command in order to properly execute it.*
+
 This will prompt for the selection of stock/intel packages. Select 1 for stock.
 
 Example option selection for creating stock/intel environement as given below
@@ -103,16 +105,16 @@ The script **generates the synthetic data**, **performs low-level feature engine
 The run benchmark script takes the following arguments:
 
 ```shell
-usage: MOSFET_v5_ML.py [-h] [-l LOGFILE] [-i] [-m modeltype] [-mf modelfile] [-n n_data_len]
+usage: MOSFET_v5_ML.py [-h] [-l LOGFILE] [-i] [-m model] [-mf modelfile] [-n n_data_len]
 
 arguments:
   -h, --help            show this help message and exit
   -l, --logfile         log file to output benchmarking results to
   -i, --intel           use intel accelerated technologies where available
-  -m, --modeltype           provide model type (lr for LinearRegression, xgb for XGBoost, 
+  -m, --model           provide model type (lr for LinearRegression, xgb for XGBoost, 
                                             xgbh for XGBoost with hyperparameter tuning)
   -mf,  --modelfile      provide model file name to dump the trained model
-  -s n_data_len         parameter which decides data length (120,960,3240K). Provide 1,2, or 3
+  -n n_data_len         parameter which decides data length (120,960,3240K). Provide 1,2, or 3
 ```
 
 To run with stock set-up while logging the performance to `logs`, we would run in the parent directory (after creating the appropriate environment as above):
@@ -175,6 +177,8 @@ Follow the same instructions as the ones for setting up a stock environment. Exe
 ```shell
 ./setupenv.sh
 ```
+>*Note: Depending on your machine settings, you may need to run the command `chmod +x ./setupenv.sh` prior to running the `./setupenv.sh` command in order to properly execute it.*
+
 This will prompt for the selection of stock/intel packages. Select 2 for intel.
 
 ```shell
@@ -200,16 +204,16 @@ The script **generates the synthetic data**, **performs low-level feature engine
 The run benchmark script takes the following arguments:
 
 ```shell
-usage: MOSFET_v5_ML.py [-h] [-l LOGFILE] [-i] [-m modeltype] [-mf modelfile] [-n n_data_len]
+usage: MOSFET_v5_ML.py [-h] [-l LOGFILE] [-i] [-m model] [-mf modelfile] [-n n_data_len]
 
 arguments:
   -h, --help            show this help message and exit
   -l, --logfile         log file to output benchmarking results to
   -i, --intel           use intel accelerated technologies where available
-  -m, --modeltype           provide model type (lr for LinearRegression, xgb for XGBoost, 
+  -m, --model           provide model type (lr for LinearRegression, xgb for XGBoost, 
                                             xgbh for XGBoost with hyperparameter tuning)
   -mf,  --modelfile      provide model file name to dump the trained model
-  -s n_data_len         parameter which decides data length (120,960,3240K). Provide 1,2, or 3
+  -n n_data_len         parameter which decides data length (120,960,3240K). Provide 1,2, or 3
 ```
 
 To run with Intel technologies, logging the performance to `logs`, we would run in the parent directory (after creating the appropriate environment as above):
